@@ -1,0 +1,63 @@
+<html><head><title>calculator</title></head>
+    <link rel="stylesheet" href="calculator.css" type="text/css">
+    <body>
+     <div id="calculator">
+   
+         <table border=1>
+             <div id="answer"></div><!-- This is where the answer is been displayed
+            <div class="invisible"><input type="text" id="another"  readonly><!--This is the behind the scene of the real operation that is being computed -->
+            <div class="invisible"><input type="text" id="another" ></div>
+             
+                 <tbody>
+                     <tr>
+                    <tr> <td colspan="5"><input type="text" id="input" class="input-box" ></td><!-- table to display operation -->
+                     </tr>
+                     
+                     <tr>
+                 <td><input id="(" onclick=men(this.value,this.id) type="button" value="("><!-- we are returning the value to var(text) and id to var(another)-->
+                 </td> <td><input id=")" type="button" onclick=men(this.value,this.id) value=")"></td><!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="22/7" type="button" onclick=men(this.value,this.id) value="&prod;"> </td><!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="E" type="button" onclick=men(this.value,this.id) value="e"></td><!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="Math.log10("  data-key="log(" type="button" onclick=men(this.dataset.key,this.id) value="log"></td> <!-- we are settting the data-key value to the var(text)  while we are returning  the id to the var(another) which is set to display:none --->
+             </tr>
+                     
+             <tr>
+                 <td><input id="7" type="button"   onclick=men(this.value,this.id) value=7></td><!-- we are returning the value to var(text) and id to var(another)-->  
+                 <td><input id="8" type="button" onclick=men(this.value,this.id)  value=8></td> <!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="9" type="button" onclick=men(this.value,this.id) value=9></td><!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="men" type="button" onclick=del() onkeydown="del()" value="DEL"></td> <!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="Math.sin(" type="button" data-key="sin(" onclick=men(this.dataset.key,this.id) value="sin"></td>  <!-- we setting the data-key value to the var(text)  while we are returning  the id to the var(another) which is set to display:none --->
+             </tr>
+             <tr> <td><input id="4" type="button" onclick=men(this.value,this.id)  value=4></td> <!-- we are returning the value to var(text) and id to var(another)--> 
+                 <td><input id="5" type="button" onclick=men(this.value,this.id) value=5></td> <!-- we are returning the value to var(text) and id to var(another)--> 
+                 <td><input id="6" type="button" onclick=men(this.value,this.id) value=6></td>  <!-- we are returning the value to var(text) and id to var(another)--> 
+                 <td><input id="/" type="button" onclick=men(this.value,this.id) value="/"></td> <!-- we are returning the value to var(text) and id to var(another)--> 
+                 <td><input id="Math.cos("  data-key="cos(" type="button" onclick=men(this.dataset.key,this.id) value="cos"></td> <!-- we setting the data-key value to the var(text)  while we are returning  the id to the var(another) which is set to display:none --->
+             </tr>
+                     
+             <tr> 
+                 <td><input id="1" type="button" onclick=men(this.value,this.id) value=1></td><!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="2" onclick=men(this.value,this.id) type="button" value=2></td> <!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="3" type="button"  onclick=men(this.value,this.id) value=3></td>  <!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="*" type="button" onclick=men(this.value,this.id) style="font-weight:bolder;font-size:20px" value="*"></td>  <!-- we are returning the value to var(text) and id to var(another)-->
+                 <td><input id="Math.tan("  data-key="tan(" type="button" onclick=men(this.dataset.key,this.id) value="tan"></td> <!-- we setting the data-key value to the var(text)  while we are returning  the id to the var(another) which is set to display:none --->
+             </tr>
+             <tr> 
+                 <td><input id="."  type="button" onclick=men(this.value,this.id)  value="."></td> 
+                 <td colspan="2"><input id="0" type="button"  onclick=men(this.value,this.id) value=0></td>
+                 <td rowspan="2" style="background:red"><input id="+"  onclick="men(this.id)" type="button" value="+"></td> 
+                 <td><input id="Math.sqrt(" type="button" data-key="&radic;(" onclick=men(this.dataset.key,this.id) value="&radic;" style="font-weight:bolder"></td> <!-- we setting the data-key value to the var(text)  while we are returning  the id to the var(another) which is set to display:none --->
+             </tr>
+                     
+             <tr> 
+                 <td><input id="AC" type="button" onclick="AC()" value="AC"></td> 
+                 <td colspan="2"><input id="equal"  onclick=equal() type="button" value="="></td> 
+                 <td><input id="-" type="button" onclick=men(this.value,this.id) value="-" style="font-weight:bolder"></td><!-- we are returning the value to var(text) and id to var(another)-->
+             </tr>
+                     
+             </tbody>
+         </table>  
+        </div>
+    <script src="calculator.js" type="text/javascript"></script>
+    </body>
+</html>
